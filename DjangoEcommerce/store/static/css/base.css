@@ -1,0 +1,19 @@
+.dark-bar {
+    width: 100%;
+    height: 150px;
+    background: black;
+}
+.text-container{
+    padding: 37.5px;
+    text-align: center;
+}
+.text-container span{
+    font-size: 40px;
+    font-weight: bold;
+    color: bisque;
+}
+.mobile, .laptop{
+    margin-top: 0px;
+    padding: 50px;
+
+}
