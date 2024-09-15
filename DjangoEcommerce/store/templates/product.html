@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Product
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row mt-5">
+    <div class="col-10 mx-auto col-md-6 my-3">
+      <img src="" alt="">
+    </div>
+    <div class="col-10 mx-auto col-md-6 my-3">
+      <div>
+        <h1 class="product_title">HTC</h1>
+        <h5 class="text-info font-italic mb-3">
+          <span class="mr-1">$</span> 400
+        </h5>
+        <p class="product_description">Product Description</p>
+        <p class="text-justify product_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi delectus fugiat praesentium quos at eaque deserunt quisquam sapiente tenetur quae pariatur, voluptatem quod in. Iure unde labore facilis itaque adipisci?</p>
+
+        <p class="text-justify product_text"><b>Out of Stock</b></p>
+
+        <a href="#">
+          <button type="button" name="button" class="btn btn-secondary">
+            Add to Cart
+          </button>
+          </a>
+
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
