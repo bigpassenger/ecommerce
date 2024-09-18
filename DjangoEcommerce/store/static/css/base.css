@@ -12,16 +12,3 @@
     font-weight: bold;
     color: bisque;
 }
-.mobile, .laptop{
-    margin-top: 0px;
-    padding: 50px;
-
-}
-.random-product{
-    height: 600px;
-    width: 100%;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-
-}

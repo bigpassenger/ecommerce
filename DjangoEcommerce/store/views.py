@@ -6,3 +6,7 @@ def home(request):
     return render(request,'home.html')
 def product(request):
     return render(request,'product.html')
+def laptops(request):
+    return render(request, 'laptops.html')
+def mobiles(request):
+    return render(request, 'mobiles.html')
