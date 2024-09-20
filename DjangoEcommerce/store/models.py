@@ -19,6 +19,8 @@ class Company(models.Model):
 
     class Meta:
         ordering = ('name',)
+        verbose_name = 'company'
+        verbose_name_plural = 'companies'
     def __str__(self):
         return self.name
     
@@ -26,7 +28,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100,unique=True)
     slug = models.SlugField(max_length=250,unique=True)
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
-    company = models.ForeignKey(Company,on_delete=models.CASCADE)
+    company = models.ForeignKey(Company,on_delete=models.CASCADE,blank=True)
     price = models.DecimalField(max_digits=10,decimal_places=2)
     image = models.ImageField(upload_to='product',blank=True)
     stock = models.IntegerField()
