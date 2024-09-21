@@ -11,3 +11,9 @@
     padding-right: 50px;
 
 }
+.mobile img{
+    height: 300px;
+}
+.card:hover img{
+    background-color: azure;
+}
