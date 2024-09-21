@@ -70,21 +70,23 @@
 
 <div class='dark-bar'>
 </div>
+
 <div class='random-product'>
  <div class="card mb-3" style="max-width: 100%; height:500px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="...">
+        <img src="{{random_product.image.url}}" class="img-fluid rounded-start" alt="{{random_product.name}}">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          <h5 class="card-title">{{random_product.name}}</h5>
+          <p class="card-text">{{random_product.description}}</p>
+          <p class="card-text"><small class="text-body-secondary">{{random_product.created}}</small></p>
         </div>
       </div>
     </div>
   </div> 
 
 </div>
+
   {%endblock%}
