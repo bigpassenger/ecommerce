@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{%block styles %}
+<link rel="stylesheet" href="{% static 'css/laptops.css' %}">
+{%endblock%}
+  <title>{%block title%}{%endblock%}</title>
+{%block content%}
+<br>
+<div class='laptop'>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {%for product in products%}
+  <div class="col-lg-3">
+    <div class="card">
+      {% if product.image %}
+      <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
+      {%endif%}
+      <div class="card-body">
+        <h5 class="card-title">{{product.name}}</h5>
+        {% comment %} <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> {% endcomment %}
+    </div>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{product.price}} تومان</li>
+          {%if product.available%}
+          <li class="list-group-item">
+            <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btn-check-outlined">موجود
+               است
+            </label><br>
+          </li>
+          {%else%}
+          <li class="list-group-item ">
+            <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="btn-check-outlined">موجود
+               است
+            </label><br>
+          </li>
+          {%endif%}
+      </ul>
+      <div class="card-body">
+          <a href="#" class="btn btn-success">خرید</a>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
+</div>
+</div>
+
+  {%endblock%}

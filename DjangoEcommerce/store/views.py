@@ -21,7 +21,9 @@ def product(request,category_slug,product_slug):
     return render(request,'product.html',{
         'product':product
     })
-def laptops(request):
-    return render(request, 'laptops.html')
-def mobiles(request):
-    return render(request, 'mobiles.html')
+def category(request,category_slug):
+    products = Product.objects.filter(category__slug= category_slug)
+
+    return render(request, 'category.html',{
+        'products':products
+    })
