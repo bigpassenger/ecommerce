@@ -6,25 +6,27 @@
 <div class="container py-5">
   <div class="row mt-5">
     <div class="col-10 mx-auto col-md-6 my-3">
-      <img src="" alt="">
+      <img src="{{product.image.url}}" alt="">
     </div>
     <div class="col-10 mx-auto col-md-6 my-3">
       <div>
-        <h1 class="product_title">HTC</h1>
+        <h1 class="product_title">{{product.name}}</h1>
         <h5 class="text-info font-italic mb-3">
-          <span class="mr-1">$</span> 400
+           {{product.price}}<span class="mr-1">تومان</span>
         </h5>
-        <p class="product_description">Product Description</p>
-        <p class="text-justify product_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi delectus fugiat praesentium quos at eaque deserunt quisquam sapiente tenetur quae pariatur, voluptatem quod in. Iure unde labore facilis itaque adipisci?</p>
-
-        <p class="text-justify product_text"><b>Out of Stock</b></p>
-
+        <p class="product_description">توضیحات</p>
+        <p class="text-justify product_text">{{product.descrition}}</p>
+        {%if product.stock <= 0 %}
+        <p class="text-justify product_text"><b>تمام شده</b></p>
+        {%else%}
+        <p class="text-justify product_text"><b> در انبار {{product.stock}}</b></p>
+        <br><br><br><br><br>
         <a href="#">
-          <button type="button" name="button" class="btn btn-secondary">
-            Add to Cart
+          <button type="button" name="button" class="btn btn-success">
+            افزودن به سبد
           </button>
           </a>
-
+          {%endif%}
       </div>
     </div>
   </div>
